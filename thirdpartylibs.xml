@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<libraries>
+    <library>
+        <location>vendor/TextMagic</location>
+        <name>TextMagic PHP SDK</name>
+        <version>2.0.23575</version>
+        <license>MIT</license>
+        <licenseversion>1</licenseversion>
+    </library>
+</libraries>
