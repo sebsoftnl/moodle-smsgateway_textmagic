@@ -39,6 +39,6 @@ interface textmagic_sms_service_provider {
     public static function send_sms_message(
         string $messagecontent,
         string $phonenumber,
-        stdclass $config,
+        stdClass $config,
     ): message_status;
 }
