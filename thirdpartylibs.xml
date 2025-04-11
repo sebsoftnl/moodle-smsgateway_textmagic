@@ -7,4 +7,11 @@
         <license>MIT</license>
         <licenseversion>1</licenseversion>
     </library>
+    <library>
+        <location>vendor/autoload.php</location>
+        <name>SPL autoloader</name>
+        <version>1.0</version>
+        <license>MIT</license>
+        <licenseversion>1</licenseversion>
+    </library>
 </libraries>

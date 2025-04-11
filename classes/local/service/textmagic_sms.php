@@ -80,14 +80,13 @@ class textmagic_sms implements textmagic_sms_service_provider {
             $input->setPhones($phonenumber);
 
             $result = $api->sendMessage($input);
-            
-            // Check if we have a message ID in the response
+
+            // Check if we have a message ID in the response.
             if (!empty($result->getId())) {
-                //debugging('TextMagic message sent successfully with ID: ' . $result->getId());
                 return message_status::GATEWAY_SENT;
             }
 
-            // If we get here, something went wrong but didn't throw an exception
+            // If we get here, something went wrong but didn't throw an exception.
             debugging('TextMagic API call succeeded but no message ID was returned');
             return message_status::GATEWAY_ERROR;
 

@@ -28,4 +28,4 @@ $plugin->component = 'smsgateway_textmagic';
 $plugin->version = 2025040800;
 $plugin->requires = 2024100100;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->supported = [405, 500]; // Supports Moodle 4.5 and 5.0
+$plugin->supported = [405, 500]; // Supports Moodle 4.5 and 5.0.
