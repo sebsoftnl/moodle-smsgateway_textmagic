@@ -34,6 +34,7 @@ interface textmagic_sms_service_provider {
      *
      * @param string $messagecontent the content to send in the SMS message.
      * @param string $phonenumber the destination for the message.
+     * @param stdClass $config the gateway instance config.
      * @return message_status Status of the message.
      */
     public static function send_sms_message(
