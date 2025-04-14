@@ -9,7 +9,6 @@ This plugin integrates TextMagic's SMS gateway service with Moodle, allowing SMS
 ## Features
 
 - Integration with TextMagic's SMS API
-- Configurable sender name/number
 - Support for international phone numbers
 - Easy setup and configuration
 - Supports Multi-Factor Authentication (MFA)
@@ -18,7 +17,6 @@ This plugin integrates TextMagic's SMS gateway service with Moodle, allowing SMS
 ## Requirements
 - Moodle 4.5 or later
 - A TextMagic account and API credentials
-- Valid phone number for sending SMS
 
 ## Installation and Configuration
 

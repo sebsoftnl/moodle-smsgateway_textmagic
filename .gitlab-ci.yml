@@ -5,5 +5,5 @@ include:
 
 variables:
   PLUGIN: 'smsgateway_textmagic'
-  REPOURL: ''
-  PATHNAME: 'sms/gateway/textmagic' 
+  REPOURL: 'https://github.com/sebsoftnl/moodle-smsgateway_textmagic'
+  PATHNAME: 'sms/gateway/textmagic'
