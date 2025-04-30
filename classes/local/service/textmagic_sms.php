@@ -87,17 +87,13 @@ class textmagic_sms implements textmagic_sms_service_provider {
             }
 
             // If we get here, something went wrong but didn't throw an exception.
-            debugging('TextMagic API call succeeded but no message ID was returned');
-            return message_status::GATEWAY_ERROR;
-
-        } catch (textmagic\Exceptions\AuthenticateException $aex) {
-            debugging('TextMagic authentication failed: ' . $aex->getMessage() . "\n" . $aex->getTraceAsString());
-            return message_status::GATEWAY_NOT_AVAILABLE;
-        } catch (textmagic\Exceptions\BalanceException $bex) {
-            debugging('TextMagic insufficient balance: ' . $bex->getMessage() . "\n" . $bex->getTraceAsString());
+            debugging(get_string('err:nomsgid', 'smsgateway_textmagic'));
+            return message_status::GATEWAY_FAILED;
+        } catch (\TextMagic\ApiException $aex) {
+            debugging(get_string('err:api', 'smsgateway_textmagic', $aex->getMessage() . "\n" . $aex->getTraceAsString()));
             return message_status::GATEWAY_NOT_AVAILABLE;
         } catch (\Exception $e) {
-            debugging('TextMagic unexpected error: ' . $e->getMessage() . "\n" . $e->getTraceAsString());
+            debugging(get_string('err:other', 'smsgateway_textmagic', $e->getMessage() . "\n" . $e->getTraceAsString()));
             return message_status::GATEWAY_NOT_AVAILABLE;
         }
     }

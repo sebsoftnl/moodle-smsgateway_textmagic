@@ -23,6 +23,10 @@
  */
 
 $string['apikey'] = 'API Key';
+$string['err:nomsgid'] = 'TextMagic API call succeeded but no message ID was returned';
+$string['err:api'] = 'TextMagic API error: {$a}';
+$string['err:balance'] = 'TextMagic insufficient balance: {$a}';
+$string['err:other'] = 'TextMagic unexpected error: {$a}';
 $string['gateway'] = 'Textmagic service';
 $string['pluginname'] = 'Textmagic';
 $string['privacy:metadata'] = 'The textmagic SMS gateway plugin does not store any personal data.';
